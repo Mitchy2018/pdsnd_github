@@ -218,13 +218,13 @@ def main():
         df = load_data(city, month, day)
 
         time_stats(df)
-        time.sleep(5)
+        time.sleep(4)
         station_stats(df)
-        time.sleep(5)
+        time.sleep(4)
         trip_duration_stats(df)
-        time.sleep(5)
+        time.sleep(4)
         user_stats(df)
-        time.sleep(5)
+        time.sleep(4)
         raw_data_stats(df)
 
         restart = input('\nWould you like to restart? Enter yes or no.\n')
