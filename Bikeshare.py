@@ -24,15 +24,13 @@ def filters_period(period, range_period):
         string which shows which period would be use to filter the data or 'all' when no filter is required by the user
    """
 
-    string = 'Would you like to filter the data by {}? Yes or No? \n'.format(period)
-
-    response =  input_validity(string)
+    response =  input_validity('Would you like to filter the data by {}? Yes or No? \n'.format(period))
     if response == 'no':
         value = 'all'
     else:
         while True:
-            string = 'Which {0}? {1}? \n' .format(period,', '.join(range_period))
-            value = input(string).title()
+
+            value = input('Which {0}? {1}? \n' .format(period,', '.join(range_period))).title()
             if value in range_period:
                 break
             else:
@@ -198,8 +196,8 @@ def user_stats(df):
 
 def raw_data_stats(df):
      """Displays five line of raw data upon request by user."""
-     string = 'Do you want to see 5 lines of raw data? Yes or No? '
-     response = input_validity(string)
+
+     response = input_validity('Do you want to see 5 lines of raw data? Yes or No? ')
 
      if response == 'no':
         return
@@ -207,8 +205,7 @@ def raw_data_stats(df):
         print(df.head())
         c = 5
         while True:
-           string = 'Do you want to see more raw data? Yes or no? '
-           response = input_validity(string)
+           response = input_validity('Do you want to see more raw data? Yes or no? ')
            if response == 'no': break
            print(df.iloc[c:c+5])
            c+=5 #incrementing the counter to be able to read the next five elements
