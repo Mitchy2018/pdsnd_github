@@ -18,6 +18,7 @@ provided by Motivate, a bike share system. The files contained randomly selected
 two additional columns not found in Washington. The bikeshare_2.py provided by Udacity was used as a template for the 
 python code
 
-### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+### Software required
+For this project NumPy and Python 3 are needed. Best if installed using Anaconda. When done this way, a text editor, like atom
+and a terminal application is used. 
 
