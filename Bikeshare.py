@@ -30,6 +30,7 @@ def filters_period(period, range_period):
     if response == 'no':
         value = 'all'
     else:
+    #handles invalid inputs by the user
         while True:
             string = 'Which {0}? {1}? \n' .format(period,', '.join(range_period))
             value = input(string).title()
