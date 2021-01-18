@@ -28,6 +28,7 @@ def filters_period(period, range_period):
     if response == 'no':
         value = 'all'
     else:
+    #handles invalid inputs by the user
         while True:
 
             value = input('Which {0}? {1}? \n' .format(period,', '.join(range_period))).title()
@@ -181,7 +182,7 @@ def user_stats(df):
     # TO DO: Display counts of user types
     print('The total counts of each user types are:\n', df['User Type'].value_counts())
 
-    #if statement to avaoid error when it comes to city without gender and birthyear
+    #if statement to avoid errors, by taking into consideration Washington which doesn't have the gender and birthyear columns
     if 'Gender' in df:
         # TO DO: Display counts of gender
         print('\nThe total counts per gender are:\n', df['Gender'].value_counts())
